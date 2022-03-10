@@ -4,7 +4,7 @@ class BubbleStory extends StatelessWidget {
   final username;
 
   // ignore: use_key_in_widget_constructors
-  const BubbleStory({required this.username});
+  const BubbleStory({Key? key, required this.username}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
