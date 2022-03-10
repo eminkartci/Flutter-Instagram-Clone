@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone_amean/pages/home.dart';
 import 'package:instagram_clone_amean/pages/profile.dart';
 import 'package:instagram_clone_amean/pages/reels.dart';
 import 'package:instagram_clone_amean/pages/search.dart';
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage> {
 
   // Different Pages to navigate
   final List<Widget> _subPages = [
-    HomePage(),
+    UserHomePage(),
     SearchPage(),
     ReelsPage(),
     ShopPage(),
@@ -37,6 +38,7 @@ class _HomePageState extends State<HomePage> {
           currentIndex: _selectedIndex,
           onTap: _navigateBottomNavBar,
           type: BottomNavigationBarType.fixed,
+          elevation: 0,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
