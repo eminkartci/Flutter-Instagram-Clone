@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone_amean/pages/util/bubble_stories.dart';
 
 class UserHomePage extends StatelessWidget {
-  const UserHomePage({Key? key}) : super(key: key);
+  UserHomePage({Key? key}) : super(key: key);
+
+  final List people = [
+    "eminkartci",
+    "akinanac",
+    "ozturkoglu",
+    "durmush",
+    "ezgim"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +38,20 @@ class UserHomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Center(child: Text("HOME")),
+      body: Column(
+        children: [
+          // Stories
+          Container(
+              height: 130,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: people.length,
+                itemBuilder: (context, index) {
+                  return BubbleStory(username: people[index]);
+                },
+              ))
+        ],
+      ),
     );
   }
 }
