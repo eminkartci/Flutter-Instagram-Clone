@@ -78,12 +78,12 @@ class ProfilePage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       "eminkartci",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     Row(
-                      children: [
+                      children: const [
                         Icon(Icons.edit),
                       ],
                     )
@@ -102,6 +102,49 @@ class ProfilePage extends StatelessWidget {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(8),
+                  child: Container(
+                    padding: EdgeInsets.all(8),
+                    child: Center(child: Text("Posts")),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(8)),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(8),
+                  child: Container(
+                    padding: EdgeInsets.all(8),
+                    child: Center(child: Text("Reels")),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(8)),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(8),
+                  child: Container(
+                    padding: EdgeInsets.all(8),
+                    child: Center(child: Text("Friends")),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(8)),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        )
       ],
     ));
   }
