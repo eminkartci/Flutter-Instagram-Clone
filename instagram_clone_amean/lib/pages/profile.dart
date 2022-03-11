@@ -170,6 +170,21 @@ class ProfilePage extends StatelessWidget {
                   },
                 )),
           ),
+          const TabBar(tabs: [
+            Tab(
+                icon: Icon(
+              Icons.grid_3x3_outlined,
+            )),
+            Tab(
+              icon: Icon(Icons.video_call),
+            ),
+            Tab(
+              icon: Icon(Icons.shop),
+            ),
+            Tab(
+              icon: Icon(Icons.person),
+            ),
+          ])
         ],
       )),
     );
