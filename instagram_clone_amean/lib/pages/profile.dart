@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone_amean/pages/util/account_tab.dart';
 import 'package:instagram_clone_amean/pages/util/bubble_stories.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -184,7 +185,14 @@ class ProfilePage extends StatelessWidget {
             Tab(
               icon: Icon(Icons.person),
             ),
-          ])
+          ]),
+          const Expanded(
+              child: TabBarView(children: [
+            AccountTab(),
+            AccountTab(),
+            AccountTab(),
+            AccountTab()
+          ]))
         ],
       )),
     );
