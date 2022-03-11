@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone_amean/pages/util/explore_grid.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class SearchPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(child: Text("SEARCH")),
+      body: ExploreGrid(),
     );
   }
 }
